@@ -17,7 +17,7 @@ class YouTubeProvider(BaseProvider):
         self.audio_format = audio_format
 
     def search(self, track: Track) -> str:
-        return f"ytsearch1:{track.artist} - {track.title}"
+        return f"ytsearch1:{track.artist} - {track.title} official audio"
 
     def download(self, track: Track, query: str, output_dir: str) -> None:
         safe_artist = sanitize(track.artist)
